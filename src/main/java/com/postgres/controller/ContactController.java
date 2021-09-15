@@ -21,10 +21,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
-@Api(description = "Endpoints for Creating, Retrieving, Updating and Deleting of Contacts.",
-        tags = {"contact"})
 @RestController
-@RequestMapping("/api")
 public class ContactController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -115,11 +112,9 @@ public class ContactController {
             contactService.update(contact);
             return ResponseEntity.ok().build();
         } catch (ResourceNotFoundException ex) {
-            // log exception first, then return Not Found (404)
             logger.error(ex.getMessage());
             return ResponseEntity.notFound().build();
         } catch (BadResourceException ex) {
-            // log exception first, then return Bad Request (400)
             logger.error(ex.getMessage());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
