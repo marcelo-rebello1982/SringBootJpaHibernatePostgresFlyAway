@@ -31,6 +31,7 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any()).build().apiInfo(apiInfo());
     }
 
+
     private ApiInfo apiInfo() {
         return new ApiInfo("API xxx", "API REST  xxx", "Versão 1.0", "http://www.xxx.com.br",
                 new Contact("MPRM", "http://www.xxx.com.br", "mp.rebello.martins@gmail.com"), "opensource",
