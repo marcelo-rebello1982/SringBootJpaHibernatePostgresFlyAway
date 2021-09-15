@@ -2,6 +2,8 @@ package com.postgres.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Cache;
@@ -15,7 +17,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "address")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-@Getter @Setter
+@Getter @Setter @Builder @Data
 public class Address implements Serializable {
 
     @Id

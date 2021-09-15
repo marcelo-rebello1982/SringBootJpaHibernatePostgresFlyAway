@@ -19,7 +19,7 @@ public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2).useDefaultResponseMessages(false)
-                .select().apis(RequestHandlerSelectors.basePackage("com.api.desafio.livros.controller"))
+                .select().apis(RequestHandlerSelectors.basePackage("com.postgres.controller"))
                 .paths(PathSelectors.any()).build().apiInfo(apiInfo());
     }
 

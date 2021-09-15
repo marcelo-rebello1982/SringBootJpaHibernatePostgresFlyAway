@@ -40,6 +40,8 @@ package com.postgres.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Cache;
@@ -56,8 +58,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "contact")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-@Getter
-@Setter
+@Getter @Setter
 public class Contact implements Serializable {
 
     private static final long serialVersionUID = 4048798961366546485L;
