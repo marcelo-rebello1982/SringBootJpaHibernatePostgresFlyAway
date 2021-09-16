@@ -112,7 +112,7 @@ public class Contact implements Serializable {
     private String note;
 
     @ApiModelProperty(notes = "Notes about the age off contact.",
-            example = "age age age", required = false, position = 8)
+            example = "age", required = false, position = 8)
     @Column(length = 99)
     @Min(value = 18, message = "Age should not be less than 18 years")
     @Max(value = 100, message = "Age should not be greater than 100 years")

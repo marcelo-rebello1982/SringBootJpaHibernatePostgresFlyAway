@@ -79,7 +79,7 @@ public class ContactController {
                                               @Valid @RequestBody Contact contact) throws URISyntaxException {
         try {
             Contact newContact = contactService.save(contact);
-            return ResponseEntity.created(new URI("/api/contacts/" + newContact.getId()))
+            return ResponseEntity.created(new URI("/api/v1/findByID/" + newContact.getId()))
                     .body(contact);
         } catch (ResourceAlreadyExistsException ex) {
             // log exception first, then return Conflict (409)
