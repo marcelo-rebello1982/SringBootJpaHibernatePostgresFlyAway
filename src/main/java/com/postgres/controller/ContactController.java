@@ -36,13 +36,13 @@ public class ContactController {
     @Autowired
     private ContactService contactService;
 
-    @ApiOperation(value = "Find Contacts by name", notes = "Name search by %name% format", tags = {"contact"})
+    @ApiOperation(value = "Procurar pelo nome", notes = "Name search by %name% format", tags = {"contact"})
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "successful operation", response = List.class)})
     @RequestMapping(method = RequestMethod.GET, path = "/findAll", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Contact>> findAll(@ApiParam(name = "contactId", value = "Page number, default is 1",
             example = "1", required = false) @RequestParam(value = "page", defaultValue = "1") int pageNumber,
-                @ApiParam("Name of the contact for search.") @RequestParam(required = false) String name) {
+                @ApiParam("Digite o nome para procurar.") @RequestParam(required = false) String name) {
         if (StringUtils.isEmpty(name)) {
             return ResponseEntity.ok(contactService.findAll(pageNumber, ROW_PER_PAGE));
         } else {
