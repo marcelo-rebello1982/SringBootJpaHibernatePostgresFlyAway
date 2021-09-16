@@ -36,7 +36,6 @@ public class ContactService {
     }
     
     public List<Contact> findAll(int pageNumber, int rowPerPage) {
-        System.out.println("ContactService");
         List<Contact> contacts = new ArrayList<>();
         contactRepository.findAll(PageRequest.of(pageNumber - 1, rowPerPage)).forEach(contacts::add);
         return contacts;
@@ -46,7 +45,6 @@ public class ContactService {
         Contact filter = new Contact();
         filter.setName(name);
         Specification<Contact> spec = new ContactSpecification(filter);
-        
         List<Contact> contacts = new ArrayList<>();
         contactRepository.findAll(spec, PageRequest.of(pageNumber - 1, rowPerPage)).forEach(contacts::add);
         return contacts;

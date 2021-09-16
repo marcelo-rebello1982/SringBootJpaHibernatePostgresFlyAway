@@ -28,3 +28,11 @@ drop table if exists address cascade
 drop table if exists contact cascade
 drop table if exists address cascade
 drop table if exists contact cascade
+drop table if exists address cascade
+drop table if exists contact cascade
+drop table if exists address cascade
+drop table if exists contact cascade
+drop table if exists address cascade
+drop table if exists contact cascade
+drop table if exists address cascade
+drop table if exists contact cascade
