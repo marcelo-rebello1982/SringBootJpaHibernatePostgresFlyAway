@@ -2,14 +2,14 @@ package com.postgres.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
@@ -17,8 +17,10 @@ import java.io.Serializable;
 @Entity
 @Table(name = "address")
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-@Getter @Setter @Builder @Data
+@Getter @Setter @NoArgsConstructor
 public class Address implements Serializable {
+
+
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -43,4 +45,7 @@ public class Address implements Serializable {
             example = "32106", required = false, position = 3)
     @Size(max = 20)
     private String postalCode;
+
+    @Email(regexp=".*@.*\\..*", message = "Email should be valid")
+    private String email;
 }

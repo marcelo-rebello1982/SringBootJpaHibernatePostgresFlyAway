@@ -1,4 +1,4 @@
-package com.postgres.main;
+package com.postgres;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

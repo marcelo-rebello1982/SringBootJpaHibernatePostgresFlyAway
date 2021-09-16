@@ -6,7 +6,10 @@ import com.postgres.exception.ResourceNotFoundException;
 import com.postgres.model.Address;
 import com.postgres.model.Contact;
 import com.postgres.service.ContactService;
-import io.swagger.annotations.*;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +24,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
+
 @RestController
+@RequestMapping("api/v1")
 public class ContactController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -34,13 +39,10 @@ public class ContactController {
     @ApiOperation(value = "Find Contacts by name", notes = "Name search by %name% format", tags = {"contact"})
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "successful operation", response = List.class)})
-    @GetMapping(value = "/contacts")
-    public ResponseEntity<List<Contact>> findAll(
-            @ApiParam(name = "contactId",
-                    value = "Page number, default is 1",
-                    example = "1",
-                    required = false) @RequestParam(value = "page", defaultValue = "1") int pageNumber,
-            @ApiParam("Name of the contact for search.") @RequestParam(required = false) String name) {
+    @RequestMapping(method = RequestMethod.GET, path = "/findAll", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Contact>> findAll(@ApiParam(name = "contactId", value = "Page number, default is 1",
+            example = "1", required = false) @RequestParam(value = "page", defaultValue = "1") int pageNumber,
+                @ApiParam("Name of the contact for search.") @RequestParam(required = false) String name) {
         if (StringUtils.isEmpty(name)) {
             return ResponseEntity.ok(contactService.findAll(pageNumber, ROW_PER_PAGE));
         } else {
@@ -52,7 +54,7 @@ public class ContactController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "successful operation", response = Contact.class),
             @ApiResponse(code = 404, message = "Contact not found")})
-    @GetMapping(value = "/contacts/{contactId}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/findByID/{contactId}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Contact> findContactById(
             @ApiParam(name = "contactId",
                     value = "Id of the contact to be obtained. Cannot be empty.",
@@ -72,11 +74,9 @@ public class ContactController {
             @ApiResponse(code = 201, message = "Contact created"),
             @ApiResponse(code = 400, message = "Invalid input"),
             @ApiResponse(code = 409, message = "Contact already exists")})
-    @PostMapping(value = "/contacts")
-    public ResponseEntity<Contact> addContact(
-            @ApiParam("Contact to add. Cannot null or empty.")
-            @Valid @RequestBody Contact contact)
-            throws URISyntaxException {
+    @PostMapping(value = "/save")
+    public ResponseEntity<Contact> addContact(@ApiParam("Contact to add. Cannot null or empty.")
+                                              @Valid @RequestBody Contact contact) throws URISyntaxException {
         try {
             Contact newContact = contactService.save(contact);
             return ResponseEntity.created(new URI("/api/contacts/" + newContact.getId()))
@@ -98,7 +98,7 @@ public class ContactController {
             @ApiResponse(code = 400, message = "Invalid ID supplied"),
             @ApiResponse(code = 404, message = "Contact not found"),
             @ApiResponse(code = 405, message = "Validation exception")})
-    @PutMapping(value = "/contacts/{contactId}")
+    @PutMapping(value = "/update/{contactId}")
     public ResponseEntity<Contact> updateContact(
             @ApiParam(name = "contactId",
                     value = "Id of the contact to be update. Cannot be empty.",
@@ -124,7 +124,7 @@ public class ContactController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "successful operation"),
             @ApiResponse(code = 404, message = "Contact not found")})
-    @PatchMapping("/contacts/{contactId}")
+    @PatchMapping("/updateAddress/{contactId}")
     public ResponseEntity<Void> updateAddress(
             @ApiParam(name = "contactId",
                     value = "Id of the contact to be update. Cannot be empty.",
@@ -147,7 +147,7 @@ public class ContactController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "successful operation"),
             @ApiResponse(code = 404, message = "Contact not found")})
-    @DeleteMapping(path = "/contacts/{contactId}")
+    @DeleteMapping(path = "/delete/{contactId}")
     public ResponseEntity<Void> deleteContactById(
             @ApiParam(name = "contactId",
                     value = "Id of the contact to be delete. Cannot be empty.",

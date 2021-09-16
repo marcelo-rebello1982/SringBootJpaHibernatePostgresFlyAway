@@ -40,18 +40,13 @@ package com.postgres.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.io.Serializable;
 
 @ApiModel(description = "Class representing a contact in the application.")
@@ -60,6 +55,9 @@ import java.io.Serializable;
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @Getter @Setter
 public class Contact implements Serializable {
+
+    public Contact() {
+    }
 
     private static final long serialVersionUID = 4048798961366546485L;
 
@@ -111,5 +109,12 @@ public class Contact implements Serializable {
     @ApiModelProperty(notes = "Notes about the contact.", 
             example = "Meet her at Spring Boot Conference", required = false, position = 8)
     @Column(length = 4000)
-    private String note;    
+    private String note;
+
+    @ApiModelProperty(notes = "Notes about the age off contact.",
+            example = "age age age", required = false, position = 8)
+    @Column(length = 99)
+    @Min(value = 18, message = "Age should not be less than 18 years")
+    @Max(value = 100, message = "Age should not be greater than 100 years")
+    private int age;
 }
