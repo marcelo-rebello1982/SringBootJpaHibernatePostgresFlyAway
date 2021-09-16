@@ -117,4 +117,9 @@ public class Contact implements Serializable {
     @Min(value = 18, message = "Age should not be less than 18 years")
     @Max(value = 100, message = "Age should not be greater than 100 years")
     private int age;
+
+    @Size(max = 20)
+    private int number;
+
+
 }

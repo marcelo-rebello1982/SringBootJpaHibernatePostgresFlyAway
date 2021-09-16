@@ -74,7 +74,7 @@ public class ContactController {
             @ApiResponse(code = 201, message = "Contato criado"),
             @ApiResponse(code = 400, message = "Entradas inválidas"),
             @ApiResponse(code = 409, message = "Contato já existente")})
-    @PostMapping(value = "/save")
+    @PostMapping(value = "/insert")
     public ResponseEntity<Contact> addContact(@ApiParam("Contact to add. Cannot null or empty.")
                                               @Valid @RequestBody Contact contact) throws URISyntaxException {
         try {

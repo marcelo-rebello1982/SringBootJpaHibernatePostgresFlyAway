@@ -32,7 +32,7 @@ public class SwaggerConfig {
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfo("API Livro-Teste", "API REST", "Versão 1.0", "http://www.xxx.com.br",
+        return new ApiInfo("API Rest", "API REST", "Versão 1.0", "http://www.xxx.com.br",
                 new Contact("IBM", "http://www.livroteste.com.br", "email@email.com"), "opensource",
                 "http://www.livroteste.com.br/terms", Collections.emptyList());
     }
