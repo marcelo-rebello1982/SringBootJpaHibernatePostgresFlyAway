@@ -1,6 +1,7 @@
 package com.postgres.controller;
 
 import com.postgres.exception.BadResourceException;
+import com.postgres.exception.BindingErrorsResponse;
 import com.postgres.exception.ResourceAlreadyExistsException;
 import com.postgres.exception.ResourceNotFoundException;
 import com.postgres.model.Address;
@@ -13,16 +14,19 @@ import io.swagger.annotations.ApiResponses;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Optional;
 
 
 @RestController
@@ -42,7 +46,7 @@ public class ContactController {
     public ResponseEntity<List<Contact>> findAll(@ApiParam(name = "contactId", value = "Page number, default is 1",
             example = "1", required = false) @RequestParam(value = "page", defaultValue = "1") int pageNumber,
                                                  @ApiParam("Digite o nome para procurar.") @RequestParam(required = false)
-                                                                    String name, @RequestParam(required = false) String email) {
+                                                         String name, @RequestParam(required = false) String email) {
         if (StringUtils.isEmpty(name)) {
             return ResponseEntity.ok(contactService.findAll(pageNumber, ROWPERPAGE));
         } else {
@@ -76,7 +80,7 @@ public class ContactController {
             @ApiResponse(code = 409, message = "Contato já existente")})
     @PostMapping(value = "/insert")
     public ResponseEntity<Contact> save(@ApiParam("Contact to add. Cannot null or empty.")
-                                              @Valid @RequestBody Contact contact) throws URISyntaxException {
+                                        @Valid @RequestBody Contact contact) throws URISyntaxException {
         try {
             Contact newContact = contactService.save(contact);
             return ResponseEntity.created(new URI("/api/v1/findByID/" + newContact.getId()))
@@ -99,26 +103,46 @@ public class ContactController {
             @ApiResponse(code = 404, message = "Contact not found"),
             @ApiResponse(code = 405, message = "Validation exception")})
     @PutMapping(value = "/update/{contactId}")
-    public ResponseEntity<Contact> updateContact(
-            @ApiParam(name = "contactId",
-                    value = "Id of the contact to be update. Cannot be empty.",
-                    example = "1",
-                    required = true)
-            @PathVariable long contactId,
-            @ApiParam("Contact to update. Cannot null or empty.")
-            @Valid @RequestBody Contact contact) {
-        try {
-            contact.setId(contactId);
-            contactService.update(contact);
-            return ResponseEntity.ok().body(contact);
-        } catch (ResourceNotFoundException ex) {
-            logger.error(ex.getMessage());
-            return ResponseEntity.notFound().build();
-        } catch (BadResourceException ex) {
-            logger.error(ex.getMessage());
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    public ResponseEntity<Contact> update(@ApiParam(name = "contactId", value = "Id of the contact to be update. Cannot be empty.", example = "1", required = true)
+                                          @PathVariable long contactId, @ApiParam("Contact to update. Cannot null or empty.") @Valid @RequestBody Contact contact, BindingResult bindingResult) throws ResourceNotFoundException, BadResourceException {
+
+        Optional<Contact> currentContact = Optional.ofNullable(contactService.findById(contactId));
+        BindingErrorsResponse errors = new BindingErrorsResponse();
+        HttpHeaders headers = new HttpHeaders();
+        if (bindingResult.hasErrors() || (contact == null)) {
+            errors.addAllErrors(bindingResult);
+            headers.add("errors", errors.toJSON());
+            return new ResponseEntity<>(headers, HttpStatus.BAD_REQUEST);
         }
+        if (!currentContact.isPresent())
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        contactService.update(contact);
+        return new ResponseEntity<>(contact, HttpStatus.OK);
     }
+
+//    @ApiOperation(value = "Update an existing contact", tags = {"contact"})
+//    @ApiResponses(value = {
+//            @ApiResponse(code = 200, message = "successful operation"),
+//            @ApiResponse(code = 400, message = "Invalid ID supplied"),
+//            @ApiResponse(code = 404, message = "Contact not found"),
+//            @ApiResponse(code = 405, message = "Validation exception")})
+//    @PutMapping(value = "/update/{contactId}")
+//    public ResponseEntity<Contact> updateContact(@ApiParam(name = "contactId", value = "Id of the contact to be update. Cannot be empty.", example = "1", required = true)
+//                                                 @PathVariable long contactId, @ApiParam("Contact to update. Cannot null or empty.") @Valid @RequestBody Contact contact) {
+//
+//        try {
+//            contact.setId(contactId);
+//            contactService.update(contact);
+//            return ResponseEntity.ok().body(contact);
+//        } catch (ResourceNotFoundException ex) {
+//            logger.error(ex.getMessage());
+//            return ResponseEntity.notFound().build();
+//        } catch (BadResourceException ex) {
+//            logger.error(ex.getMessage());
+//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+//        }
+//    }
+
 
     @ApiOperation(value = "Update an existing contact's address", tags = {"contact"})
     @ApiResponses(value = {
@@ -142,24 +166,33 @@ public class ContactController {
             return ResponseEntity.notFound().build();
         }
     }
+//
+//    @DeleteMapping(path = "/delete/{contactId}")
+//    public ResponseEntity<Contact> delete(@PathVariable long Id) throws ResourceNotFoundException {
+//        Optional<Contact> contactToDelete = Optional.ofNullable(contactService.findById(Id));
+//        if (!contactToDelete.isPresent())
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        contactService.delete(Id);
+//        return new ResponseEntity<>(contactToDelete.get(), HttpStatus.NO_CONTENT);
+//    }
+
 
     @ApiOperation(value = "Deletes a contact", tags = {"contact"})
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "successful operation"),
             @ApiResponse(code = 404, message = "Contact not found")})
     @DeleteMapping(path = "/delete/{contactId}")
-    public ResponseEntity<Void> deleteContactById(
-            @ApiParam(name = "contactId",
-                    value = "Id of the contact to be delete. Cannot be empty.",
-                    example = "1",
-                    required = true)
-            @PathVariable long contactId) {
+    public ResponseEntity<Void> deleteContactById(@ApiParam(name = "contactId", value = "Id of the contact to be delete. Cannot be empty.", example = "1",
+            required = true) @PathVariable long contactId) {
+
         try {
-            contactService.deleteById(contactId);
-            return ResponseEntity.ok().build();
+            contactService.delete(contactId);
+            //  return ResponseEntity.ok().build();
+            return new ResponseEntity<>(HttpStatus.OK);
         } catch (ResourceNotFoundException ex) {
             logger.error(ex.getMessage());
-            return ResponseEntity.notFound().build();
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            //return ResponseEntity.notFound().build();
         }
     }
 }

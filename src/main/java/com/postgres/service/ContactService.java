@@ -65,7 +65,7 @@ public class ContactService {
             throw exc;
         }
     }
-    
+
     public void update(Contact contact) 
             throws BadResourceException, ResourceNotFoundException {
         if (!StringUtils.isEmpty(contact.getName())) {
@@ -91,11 +91,10 @@ public class ContactService {
         contactRepository.save(contact);        
     }
     
-    public void deleteById(Long id) throws ResourceNotFoundException {
+    public void delete(Long id) throws ResourceNotFoundException {
         if (!existsById(id)) { 
             throw new ResourceNotFoundException("Cannot find contact with id: " + id);
-        }
-        else {
+        } else {
             contactRepository.deleteById(id);
         }
     }
