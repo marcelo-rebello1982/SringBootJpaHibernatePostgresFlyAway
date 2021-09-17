@@ -37,12 +37,12 @@ public class ContactController {
     private ContactService contactService;
 
     @ApiOperation(value = "Procurar pelo nome", notes = "Name search by %name% format", tags = {"contact"})
-    @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "successful operation", response = List.class)})
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "successful operation", response = List.class)})
     @RequestMapping(method = RequestMethod.GET, path = "/findAll", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Contact>> findAll(@ApiParam(name = "contactId", value = "Page number, default is 1",
             example = "1", required = false) @RequestParam(value = "page", defaultValue = "1") int pageNumber,
-                @ApiParam("Digite o nome para procurar.") @RequestParam(required = false) String name) {
+                                                 @ApiParam("Digite o nome para procurar.") @RequestParam(required = false)
+                                                                    String name, @RequestParam(required = false) String email) {
         if (StringUtils.isEmpty(name)) {
             return ResponseEntity.ok(contactService.findAll(pageNumber, ROW_PER_PAGE));
         } else {
@@ -54,15 +54,15 @@ public class ContactController {
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "successful operation", response = Contact.class),
             @ApiResponse(code = 404, message = "Contact not found")})
-    @GetMapping(value = "/findByID/{contactId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Contact> findContactById(
+    @GetMapping(value = "/findByID/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Contact> findById(
             @ApiParam(name = "contactId",
                     value = "Id of the contact to be obtained. Cannot be empty.",
                     example = "1",
                     required = true)
-            @PathVariable long contactId) {
+            @PathVariable long id) {
         try {
-            Contact contact = contactService.findById(contactId);
+            Contact contact = contactService.findById(id);
             return ResponseEntity.ok(contact);  // return 200, with json body
         } catch (ResourceNotFoundException ex) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // return 404, with null body
@@ -75,7 +75,7 @@ public class ContactController {
             @ApiResponse(code = 400, message = "Entradas inválidas"),
             @ApiResponse(code = 409, message = "Contato já existente")})
     @PostMapping(value = "/insert")
-    public ResponseEntity<Contact> addContact(@ApiParam("Contact to add. Cannot null or empty.")
+    public ResponseEntity<Contact> save(@ApiParam("Contact to add. Cannot null or empty.")
                                               @Valid @RequestBody Contact contact) throws URISyntaxException {
         try {
             Contact newContact = contactService.save(contact);
@@ -110,7 +110,7 @@ public class ContactController {
         try {
             contact.setId(contactId);
             contactService.update(contact);
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok().body(contact);
         } catch (ResourceNotFoundException ex) {
             logger.error(ex.getMessage());
             return ResponseEntity.notFound().build();

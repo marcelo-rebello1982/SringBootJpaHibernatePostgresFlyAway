@@ -34,7 +34,7 @@ public class ContactService {
         }
         else return contact;
     }
-    
+
     public List<Contact> findAll(int pageNumber, int rowPerPage) {
         List<Contact> contacts = new ArrayList<>();
         contactRepository.findAll(PageRequest.of(pageNumber - 1, rowPerPage)).forEach(contacts::add);
@@ -49,7 +49,8 @@ public class ContactService {
         contactRepository.findAll(spec, PageRequest.of(pageNumber - 1, rowPerPage)).forEach(contacts::add);
         return contacts;
     }
-    
+
+
     public Contact save(Contact contact) throws BadResourceException, ResourceAlreadyExistsException {
         if (!StringUtils.isEmpty(contact.getName())) {
             if (contact.getId() != null && existsById(contact.getId())) { 
