@@ -2161,4 +2161,1166 @@
 ""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
 ""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.postgres.model.Contact@366fbb46]
 ""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+""17-09-2021 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Starting SpringJpaPostgresHibernateApplication using Java 16.0.2 on NoteBookIBM with PID 19532 (C:\workspaceIBM\SpringJPA-Postgres-Hibernate\target\classes started by LVTT1W631 in C:\workspaceIBM\SpringJPA-Postgres-Hibernate)
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - No active profile set, falling back to default profiles: default
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 276 ms. Found 1 JPA repository interfaces.
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+""17-09-2021 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""17-09-2021 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3374 ms
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""17-09-2021 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.7.3 by Redgate
+""17-09-2021 [restartedMain] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:postgresql://localhost:5432/usuario (PostgreSQL 12.8)
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "usuario": << Empty Schema >>
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "usuario" is up to date. No migration necessary.
+""17-09-2021 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""17-09-2021 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+""17-09-2021 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""17-09-2021 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""17-09-2021 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""17-09-2021 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	c.p.c.ContactController:
+	{PUT [/api/v1/update/{contactId}]}: update(long,Contact,BindingResult)
+	{POST [/api/v1/insert]}: save(Contact)
+	{GET [/api/v1/findAll], produces [application/json]}: findAll(int,String,String)
+	{PATCH [/api/v1/updateAddress/{contactId}]}: updateAddress(long,Address)
+	{DELETE [/api/v1/delete/{contactId}]}: deleteContactById(long)
+	{GET [/api/v1/findByID/{id}], produces [application/json]}: findById(long)
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{ [/swagger-resources/configuration/ui]}: uiConfiguration()
+	{ [/swagger-resources]}: swaggerResources()
+	{ [/swagger-resources/configuration/security]}: securityConfiguration()
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+""17-09-2021 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""17-09-2021 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.v.f.FreeMarkerConfigurer - File system access not preferred: using SpringTemplateLoader
+""17-09-2021 [restartedMain] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+""17-09-2021 [restartedMain] WARN  o.s.b.a.g.t.GroovyTemplateAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+""17-09-2021 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5de0cf01
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@12034add
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui.html", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/springfox.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/swagger-ui-bundle.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Started SpringJpaPostgresHibernateApplication in 10.05 seconds (JVM running for 11.007)
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/ui", parameters={}
+""17-09-2021 [http-nio-8080-exec-5] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#uiConfiguration()
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.UiConfiguration@1f4777ea]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/security", parameters={}
+""17-09-2021 [http-nio-8080-exec-6] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#securityConfiguration()
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.SecurityConfiguration@5418e526]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources", parameters={}
+""17-09-2021 [http-nio-8080-exec-7] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[springfox.documentation.swagger.web.SwaggerResource@27d4fed6]]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v2/api-docs", parameters={}
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-9] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-9] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:17:42 BRT 2021, status=404, error=Not Found, path=/}]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/csrf", parameters={}
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-10] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-10] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:17:42 BRT 2021, status=404, error=Not Found, path=/csrf}]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.spring.web.json.Json@6666fe21]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui.html", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/ui", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#uiConfiguration()
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.UiConfiguration@71dd15bd]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/security", parameters={}
+""17-09-2021 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#securityConfiguration()
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.SecurityConfiguration@66a38c05]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[springfox.documentation.swagger.web.SwaggerResource@2dd68c78]]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v2/api-docs", parameters={}
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-6] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-6] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:17:45 BRT 2021, status=404, error=Not Found, path=/}]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/csrf", parameters={}
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.spring.web.json.Json@22fc7a7c]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-7] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-7] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:17:45 BRT 2021, status=404, error=Not Found, path=/csrf}]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Starting SpringJpaPostgresHibernateApplication using Java 16.0.2 on NoteBookIBM with PID 2520 (C:\workspaceIBM\SpringJPA-Postgres-Hibernate\target\classes started by LVTT1W631 in C:\workspaceIBM\SpringJPA-Postgres-Hibernate)
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - No active profile set, falling back to default profiles: default
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 151 ms. Found 1 JPA repository interfaces.
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+""17-09-2021 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""17-09-2021 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2484 ms
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""17-09-2021 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.7.3 by Redgate
+""17-09-2021 [restartedMain] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:postgresql://localhost:5432/usuario (PostgreSQL 12.8)
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "usuario": << Empty Schema >>
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "usuario" is up to date. No migration necessary.
+""17-09-2021 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""17-09-2021 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+""17-09-2021 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""17-09-2021 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""17-09-2021 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""17-09-2021 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	c.p.c.ContactController:
+	{PUT [/api/v1/update/{contactId}]}: update(long,Contact,BindingResult)
+	{POST [/api/v1/insert]}: save(Contact)
+	{GET [/api/v1/findAll], produces [application/json]}: findAll(int,String,String)
+	{GET [/api/v1/findByID/{id}], produces [application/json]}: findById(long)
+	{PATCH [/api/v1/updateAddress/{contactId}]}: updateAddress(long,Address)
+	{DELETE [/api/v1/delete/{contactId}]}: deleteContactById(long)
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{ [/swagger-resources/configuration/ui]}: uiConfiguration()
+	{ [/swagger-resources]}: swaggerResources()
+	{ [/swagger-resources/configuration/security]}: securityConfiguration()
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+""17-09-2021 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""17-09-2021 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.v.f.FreeMarkerConfigurer - File system access not preferred: using SpringTemplateLoader
+""17-09-2021 [restartedMain] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+""17-09-2021 [restartedMain] WARN  o.s.b.a.g.t.GroovyTemplateAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+""17-09-2021 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Started SpringJpaPostgresHibernateApplication in 7.871 seconds (JVM running for 8.647)
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6ef2854c
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@7eb2846b
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui.html", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/swagger-ui-bundle.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/springfox.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/ui", parameters={}
+""17-09-2021 [http-nio-8080-exec-5] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#uiConfiguration()
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.UiConfiguration@7fbda335]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/security", parameters={}
+""17-09-2021 [http-nio-8080-exec-6] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#securityConfiguration()
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.SecurityConfiguration@2bd3503b]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources", parameters={}
+""17-09-2021 [http-nio-8080-exec-7] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[springfox.documentation.swagger.web.SwaggerResource@34758904]]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v2/api-docs", parameters={}
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-9] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-9] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:18:44 BRT 2021, status=404, error=Not Found, path=/}]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/csrf", parameters={}
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-10] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-10] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:18:44 BRT 2021, status=404, error=Not Found, path=/csrf}]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.spring.web.json.Json@6f9ee207]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/%7Bid%7D", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.postgres.model.Contact> com.postgres.controller.ContactController.findById(long): Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+""17-09-2021 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:18:53 BRT 2021, status=400, error=Bad Request, path=/api/v1/findByID/%7Bid% (truncated)...]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/%7Bid%7D", parameters={}
+""17-09-2021 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.postgres.model.Contact> com.postgres.controller.ContactController.findById(long): Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+""17-09-2021 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:19:08 BRT 2021, status=400, error=Bad Request, path=/api/v1/findByID/%7Bid% (truncated)...]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+""17-09-2021 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Starting SpringJpaPostgresHibernateApplication using Java 16.0.2 on NoteBookIBM with PID 10272 (C:\workspaceIBM\SpringJPA-Postgres-Hibernate\target\classes started by LVTT1W631 in C:\workspaceIBM\SpringJPA-Postgres-Hibernate)
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - No active profile set, falling back to default profiles: default
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 201 ms. Found 1 JPA repository interfaces.
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+""17-09-2021 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""17-09-2021 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2563 ms
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""17-09-2021 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.7.3 by Redgate
+""17-09-2021 [restartedMain] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:postgresql://localhost:5432/usuario (PostgreSQL 12.8)
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "usuario": << Empty Schema >>
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "usuario" is up to date. No migration necessary.
+""17-09-2021 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""17-09-2021 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+""17-09-2021 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""17-09-2021 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""17-09-2021 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""17-09-2021 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	c.p.c.ContactController:
+	{PUT [/api/v1/update/{contactId}]}: update(long,Contact,BindingResult)
+	{POST [/api/v1/insert]}: save(Contact)
+	{GET [/api/v1/findAll], produces [application/json]}: findAll(int,String,String)
+	{PATCH [/api/v1/updateAddress/{contactId}]}: updateAddress(long,Address)
+	{DELETE [/api/v1/delete/{contactId}]}: deleteContactById(long)
+	{GET [/api/v1/findByID/{id}], produces [application/json]}: findById(long)
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{ [/swagger-resources/configuration/security]}: securityConfiguration()
+	{ [/swagger-resources]}: swaggerResources()
+	{ [/swagger-resources/configuration/ui]}: uiConfiguration()
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+""17-09-2021 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""17-09-2021 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.v.f.FreeMarkerConfigurer - File system access not preferred: using SpringTemplateLoader
+""17-09-2021 [restartedMain] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+""17-09-2021 [restartedMain] WARN  o.s.b.a.g.t.GroovyTemplateAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+""17-09-2021 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Started SpringJpaPostgresHibernateApplication in 8.483 seconds (JVM running for 9.209)
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6f9b4ba6
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@70a77db5
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/%7Bid%7D", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.postgres.model.Contact> com.postgres.controller.ContactController.findById(long): Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+""17-09-2021 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:19:52 BRT 2021, status=400, error=Bad Request, path=/api/v1/findByID/%7Bid% (truncated)...]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/7", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_0_, contact0_.address1 as address2_1_0_, contact0_.address2 as address3_1_0_, contact0_.address3 as address4_1_0_, contact0_.age as age5_1_0_, contact0_.email as email6_1_0_, contact0_.name as name7_1_0_, contact0_.note as note8_1_0_, contact0_.number as number9_1_0_, contact0_.phone as phone10_1_0_, contact0_.postal_code as postal_11_1_0_ from contact contact0_ where contact0_.id=?
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [7]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/5", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_0_, contact0_.address1 as address2_1_0_, contact0_.address2 as address3_1_0_, contact0_.address3 as address4_1_0_, contact0_.age as age5_1_0_, contact0_.email as email6_1_0_, contact0_.name as name7_1_0_, contact0_.note as note8_1_0_, contact0_.number as number9_1_0_, contact0_.phone as phone10_1_0_, contact0_.postal_code as postal_11_1_0_ from contact contact0_ where contact0_.id=?
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [5]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.postgres.model.Contact@708d9592]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/%7Bid%7D", parameters={}
+""17-09-2021 [http-nio-8080-exec-5] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.postgres.model.Contact> com.postgres.controller.ContactController.findById(long): Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+""17-09-2021 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-5] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:20:34 BRT 2021, status=400, error=Bad Request, path=/api/v1/findByID/%7Bid% (truncated)...]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui.html", parameters={}
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/swagger-ui-bundle.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/springfox.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/ui", parameters={}
+""17-09-2021 [http-nio-8080-exec-10] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#uiConfiguration()
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.UiConfiguration@2f73daf7]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/security", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#securityConfiguration()
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.SecurityConfiguration@77ecfb68]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources", parameters={}
+""17-09-2021 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[springfox.documentation.swagger.web.SwaggerResource@714eaada]]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v2/api-docs", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:20:57 BRT 2021, status=404, error=Not Found, path=/}]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/csrf", parameters={}
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-5] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-5] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:20:57 BRT 2021, status=404, error=Not Found, path=/csrf}]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.spring.web.json.Json@38963176]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Starting SpringJpaPostgresHibernateApplication using Java 16.0.2 on NoteBookIBM with PID 21408 (C:\workspaceIBM\SpringJPA-Postgres-Hibernate\target\classes started by LVTT1W631 in C:\workspaceIBM\SpringJPA-Postgres-Hibernate)
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - No active profile set, falling back to default profiles: default
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 154 ms. Found 1 JPA repository interfaces.
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+""17-09-2021 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""17-09-2021 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2487 ms
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""17-09-2021 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.7.3 by Redgate
+""17-09-2021 [restartedMain] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:postgresql://localhost:5432/usuario (PostgreSQL 12.8)
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "usuario": << Empty Schema >>
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "usuario" is up to date. No migration necessary.
+""17-09-2021 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""17-09-2021 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+""17-09-2021 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""17-09-2021 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""17-09-2021 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""17-09-2021 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	c.p.c.ContactController:
+	{PUT [/api/v1/update/{contactId}]}: update(long,Contact,BindingResult)
+	{POST [/api/v1/insert]}: save(Contact)
+	{GET [/api/v1/findAll], produces [application/json]}: findAll(int,String,String)
+	{GET [/api/v1/findByID/{id}], produces [application/json]}: findById(long)
+	{PATCH [/api/v1/updateAddress/{contactId}]}: updateAddress(long,Address)
+	{DELETE [/api/v1/delete/{contactId}]}: deleteContactById(long)
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{ [/swagger-resources/configuration/security]}: securityConfiguration()
+	{ [/swagger-resources]}: swaggerResources()
+	{ [/swagger-resources/configuration/ui]}: uiConfiguration()
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+""17-09-2021 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""17-09-2021 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.v.f.FreeMarkerConfigurer - File system access not preferred: using SpringTemplateLoader
+""17-09-2021 [restartedMain] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+""17-09-2021 [restartedMain] WARN  o.s.b.a.g.t.GroovyTemplateAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+""17-09-2021 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Started SpringJpaPostgresHibernateApplication in 8.633 seconds (JVM running for 9.612)
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5de0cf01
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@12034add
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui.html", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/swagger-ui-bundle.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/swagger-ui-standalone-preset.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/springfox.js?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 304 NOT_MODIFIED
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/ui", parameters={}
+""17-09-2021 [http-nio-8080-exec-5] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#uiConfiguration()
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.UiConfiguration@7fbda335]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/security", parameters={}
+""17-09-2021 [http-nio-8080-exec-6] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#securityConfiguration()
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.SecurityConfiguration@2bd3503b]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources", parameters={}
+""17-09-2021 [http-nio-8080-exec-7] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[springfox.documentation.swagger.web.SwaggerResource@34758904]]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v2/api-docs", parameters={}
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-9] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-9] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:22:05 BRT 2021, status=404, error=Not Found, path=/}]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/csrf", parameters={}
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-10] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-10] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:22:05 BRT 2021, status=404, error=Not Found, path=/csrf}]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.spring.web.json.Json@6f9ee207]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/%7Bid%7D", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.postgres.model.Contact> com.postgres.controller.ContactController.findById(long): Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+""17-09-2021 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:22:18 BRT 2021, status=400, error=Bad Request, path=/api/v1/findByID/%7Bid% (truncated)...]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-600.woff2", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Uma conexão estabelecida foi anulada pelo software no computador host
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/%7Bid%7D", parameters={}
+""17-09-2021 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.postgres.model.Contact> com.postgres.controller.ContactController.findById(long): Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+""17-09-2021 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:22:49 BRT 2021, status=400, error=Bad Request, path=/api/v1/findByID/%7Bid% (truncated)...]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/%7Bid%7D", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.postgres.model.Contact> com.postgres.controller.ContactController.findById(long): Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"
+""17-09-2021 [http-nio-8080-exec-3] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'long'; nested exception is java.lang.NumberFormatException: For input string: "{id}"]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:23:21 BRT 2021, status=400, error=Bad Request, path=/api/v1/findByID/%7Bid% (truncated)...]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui.html", parameters={}
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/springfox.css?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/swagger-ui.css?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Uma conexão estabelecida foi anulada pelo software no computador host
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/ui", parameters={}
+""17-09-2021 [http-nio-8080-exec-9] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#uiConfiguration()
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.UiConfiguration@40861eef]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/security", parameters={}
+""17-09-2021 [http-nio-8080-exec-10] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#securityConfiguration()
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.SecurityConfiguration@4ca6c1d9]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources", parameters={}
+""17-09-2021 [http-nio-8080-exec-8] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[springfox.documentation.swagger.web.SwaggerResource@170a9e5c]]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v2/api-docs", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/fonts/open-sans-v15-latin-regular.woff2", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:25:48 BRT 2021, status=404, error=Not Found, path=/}]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Uma conexão estabelecida foi anulada pelo software no computador host
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.spring.web.json.Json@22ee846d]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/csrf", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 12:25:48 BRT 2021, status=404, error=Not Found, path=/csrf}]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findAll?contactId=1", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-6] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findAll(int, String, String)
+""17-09-2021 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ limit ?
+""17-09-2021 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select count(contact0_.id) as col_0_0_ from contact contact0_
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.postgres.model.Contact@5a94f956, com.postgres.model.Contact@1d1e2a22, com.postgres.model.Contac (truncated)...]
+""17-09-2021 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/fonts/titillium-web-v6-latin-600.woff2", parameters={}
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: org.apache.catalina.connector.ClientAbortException: java.io.IOException: Uma conexão estabelecida foi anulada pelo software no computador host
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findAll?contactId=1&name=Patricia", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-9] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findAll(int, String, String)
+""17-09-2021 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ where contact0_.name like ? limit ?
+""17-09-2021 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%Patricia%]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.postgres.model.Contact@a7d133, com.postgres.model.Contact@3dd3379d, com.postgres.model.Contact@ (truncated)...]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Starting SpringJpaPostgresHibernateApplication using Java 16.0.2 on NoteBookIBM with PID 28460 (C:\workspaceIBM\SpringJPA-Postgres-Hibernate\target\classes started by LVTT1W631 in C:\workspaceIBM\SpringJPA-Postgres-Hibernate)
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - No active profile set, falling back to default profiles: default
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 227 ms. Found 1 JPA repository interfaces.
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+""17-09-2021 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""17-09-2021 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3234 ms
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""17-09-2021 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.7.3 by Redgate
+""17-09-2021 [restartedMain] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:postgresql://localhost:5432/usuario (PostgreSQL 12.8)
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "usuario": << Empty Schema >>
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "usuario" is up to date. No migration necessary.
+""17-09-2021 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""17-09-2021 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+""17-09-2021 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""17-09-2021 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""17-09-2021 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""17-09-2021 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	c.p.c.ContactController:
+	{PUT [/api/v1/update/{contactId}]}: update(long,Contact,BindingResult)
+	{POST [/api/v1/insert]}: save(Contact)
+	{GET [/api/v1/findAll], produces [application/json]}: findAll(int,String,String)
+	{GET [/api/v1/findByID/{id}], produces [application/json]}: findById(long)
+	{PATCH [/api/v1/updateAddress/{contactId}]}: updateAddress(long,Address)
+	{DELETE [/api/v1/delete/{contactId}]}: deleteContactById(long)
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{ [/swagger-resources/configuration/security]}: securityConfiguration()
+	{ [/swagger-resources/configuration/ui]}: uiConfiguration()
+	{ [/swagger-resources]}: swaggerResources()
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+""17-09-2021 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""17-09-2021 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.v.f.FreeMarkerConfigurer - File system access not preferred: using SpringTemplateLoader
+""17-09-2021 [restartedMain] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+""17-09-2021 [restartedMain] WARN  o.s.b.a.g.t.GroovyTemplateAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+""17-09-2021 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Started SpringJpaPostgresHibernateApplication in 9.36 seconds (JVM running for 10.229)
+""17-09-2021 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5de0cf01
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@12034add
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""17-09-2021 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findAll?name=Neuza", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findAll(int, String, String)
+""17-09-2021 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ limit ?
+""17-09-2021 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select count(contact0_.id) as col_0_0_ from contact contact0_
+""17-09-2021 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ where contact0_.name like ? limit ?
+""17-09-2021 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%Neuza%]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.postgres.model.Contact@27de1b11]]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findAll", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findAll(int, String, String)
+""17-09-2021 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ limit ?
+""17-09-2021 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(contact0_.id) as col_0_0_ from contact contact0_
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.postgres.model.Contact@2ef941b0, com.postgres.model.Contact@5248f8d5, com.postgres.model.Contac (truncated)...]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findAll?name=Davi", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findAll(int, String, String)
+""17-09-2021 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ limit ?
+""17-09-2021 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(contact0_.id) as col_0_0_ from contact contact0_
+""17-09-2021 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ where contact0_.name like ? limit ?
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%Davi%]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.postgres.model.Contact@6539ccc7]]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findAll?name=Davi", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-7] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findAll(int, String, String)
+""17-09-2021 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ limit ?
+""17-09-2021 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select count(contact0_.id) as col_0_0_ from contact contact0_
+""17-09-2021 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ where contact0_.name like ? limit ?
+""17-09-2021 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%Davi%]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.postgres.model.Contact@7488673b]]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findAll?name=Davieeee", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-8] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findAll(int, String, String)
+""17-09-2021 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ limit ?
+""17-09-2021 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select count(contact0_.id) as col_0_0_ from contact contact0_
+""17-09-2021 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ where contact0_.name like ? limit ?
+""17-09-2021 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%Davieeee%]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[]]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Starting SpringJpaPostgresHibernateApplication using Java 16.0.2 on NoteBookIBM with PID 12264 (C:\workspaceIBM\SpringJPA-Postgres-Hibernate\target\classes started by LVTT1W631 in C:\workspaceIBM\SpringJPA-Postgres-Hibernate)
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - No active profile set, falling back to default profiles: default
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 305 ms. Found 1 JPA repository interfaces.
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+""17-09-2021 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""17-09-2021 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3590 ms
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""17-09-2021 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.7.3 by Redgate
+""17-09-2021 [restartedMain] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:postgresql://localhost:5432/usuario (PostgreSQL 12.8)
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "usuario": << Empty Schema >>
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "usuario" is up to date. No migration necessary.
+""17-09-2021 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""17-09-2021 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+""17-09-2021 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""17-09-2021 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""17-09-2021 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""17-09-2021 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	c.p.c.ContactController:
+	{PUT [/api/v1/update/{contactId}]}: update(long,Contact,BindingResult)
+	{POST [/api/v1/insert]}: save(Contact)
+	{GET [/api/v1/findAll], produces [application/json]}: findAll(int,String,String)
+	{GET [/api/v1/findByID/{id}], produces [application/json]}: findById(long)
+	{PATCH [/api/v1/updateAddress/{contactId}]}: updateAddress(long,Address)
+	{DELETE [/api/v1/delete/{contactId}]}: deleteContactById(long)
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{ [/swagger-resources/configuration/security]}: securityConfiguration()
+	{ [/swagger-resources/configuration/ui]}: uiConfiguration()
+	{ [/swagger-resources]}: swaggerResources()
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+""17-09-2021 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""17-09-2021 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.v.f.FreeMarkerConfigurer - File system access not preferred: using SpringTemplateLoader
+""17-09-2021 [restartedMain] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+""17-09-2021 [restartedMain] WARN  o.s.b.a.g.t.GroovyTemplateAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+""17-09-2021 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Started SpringJpaPostgresHibernateApplication in 10.119 seconds (JVM running for 11.299)
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@33cd8918
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@fbf54a8
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findAll?name=Davi", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findAll(int, String, String)
+""17-09-2021 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ where contact0_.name like ? limit ?
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%Davi%]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.postgres.model.Contact@7609ffa0]]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findAll", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findAll(int, String, String)
+""17-09-2021 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ limit ?
+""17-09-2021 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select count(contact0_.id) as col_0_0_ from contact contact0_
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.postgres.model.Contact@10260a04, com.postgres.model.Contact@39c3fa3a, com.postgres.model.Contac (truncated)...]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Starting SpringJpaPostgresHibernateApplication using Java 16.0.2 on NoteBookIBM with PID 5440 (C:\workspaceIBM\SpringJPA-Postgres-Hibernate\target\classes started by LVTT1W631 in C:\workspaceIBM\SpringJPA-Postgres-Hibernate)
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - No active profile set, falling back to default profiles: default
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 184 ms. Found 1 JPA repository interfaces.
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+""17-09-2021 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""17-09-2021 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2596 ms
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""17-09-2021 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.7.3 by Redgate
+""17-09-2021 [restartedMain] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:postgresql://localhost:5432/usuario (PostgreSQL 12.8)
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "usuario": << Empty Schema >>
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "usuario" is up to date. No migration necessary.
+""17-09-2021 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""17-09-2021 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+""17-09-2021 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""17-09-2021 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""17-09-2021 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""17-09-2021 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	c.p.c.ContactController:
+	{PUT [/api/v1/update/{contactId}]}: update(long,Contact,BindingResult)
+	{POST [/api/v1/insert]}: save(Contact)
+	{GET [/api/v1/findAll], produces [application/json]}: findAll(int,String,String)
+	{PATCH [/api/v1/updateAddress/{contactId}]}: updateAddress(long,Address)
+	{DELETE [/api/v1/delete/{contactId}]}: deleteContactById(long)
+	{GET [/api/v1/findByID/{id}], produces [application/json]}: findById(long)
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{ [/swagger-resources/configuration/security]}: securityConfiguration()
+	{ [/swagger-resources]}: swaggerResources()
+	{ [/swagger-resources/configuration/ui]}: uiConfiguration()
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+""17-09-2021 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""17-09-2021 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.v.f.FreeMarkerConfigurer - File system access not preferred: using SpringTemplateLoader
+""17-09-2021 [restartedMain] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+""17-09-2021 [restartedMain] WARN  o.s.b.a.g.t.GroovyTemplateAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+""17-09-2021 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Started SpringJpaPostgresHibernateApplication in 9.021 seconds (JVM running for 9.908)
+""17-09-2021 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6f9b4ba6
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@70a77db5
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""17-09-2021 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/5", parameters={}
+""17-09-2021 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_0_, contact0_.address1 as address2_1_0_, contact0_.address2 as address3_1_0_, contact0_.address3 as address4_1_0_, contact0_.age as age5_1_0_, contact0_.email as email6_1_0_, contact0_.name as name7_1_0_, contact0_.note as note8_1_0_, contact0_.number as number9_1_0_, contact0_.phone as phone10_1_0_, contact0_.postal_code as postal_11_1_0_ from contact contact0_ where contact0_.id=?
+""17-09-2021 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [5]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Nothing to write: null body
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Starting SpringJpaPostgresHibernateApplication using Java 16.0.2 on NoteBookIBM with PID 6016 (C:\workspaceIBM\SpringJPA-Postgres-Hibernate\target\classes started by LVTT1W631 in C:\workspaceIBM\SpringJPA-Postgres-Hibernate)
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - No active profile set, falling back to default profiles: default
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 171 ms. Found 1 JPA repository interfaces.
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+""17-09-2021 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""17-09-2021 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2675 ms
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""17-09-2021 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.7.3 by Redgate
+""17-09-2021 [restartedMain] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:postgresql://localhost:5432/usuario (PostgreSQL 12.8)
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "usuario": << Empty Schema >>
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "usuario" is up to date. No migration necessary.
+""17-09-2021 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""17-09-2021 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+""17-09-2021 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""17-09-2021 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""17-09-2021 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""17-09-2021 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	c.p.c.ContactController:
+	{PUT [/api/v1/update/{contactId}]}: update(long,Contact,BindingResult)
+	{POST [/api/v1/insert]}: save(Contact)
+	{GET [/api/v1/findAll], produces [application/json]}: findAll(int,String,String)
+	{GET [/api/v1/findByID/{id}], produces [application/json]}: findById(long)
+	{PATCH [/api/v1/updateAddress/{contactId}]}: updateAddress(long,Address)
+	{DELETE [/api/v1/delete/{contactId}]}: deleteContactById(long)
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{ [/swagger-resources/configuration/security]}: securityConfiguration()
+	{ [/swagger-resources/configuration/ui]}: uiConfiguration()
+	{ [/swagger-resources]}: swaggerResources()
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+""17-09-2021 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""17-09-2021 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.v.f.FreeMarkerConfigurer - File system access not preferred: using SpringTemplateLoader
+""17-09-2021 [restartedMain] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+""17-09-2021 [restartedMain] WARN  o.s.b.a.g.t.GroovyTemplateAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+""17-09-2021 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Started SpringJpaPostgresHibernateApplication in 9.359 seconds (JVM running for 10.205)
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5de0cf01
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@12034add
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/5", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_0_, contact0_.address1 as address2_1_0_, contact0_.address2 as address3_1_0_, contact0_.address3 as address4_1_0_, contact0_.age as age5_1_0_, contact0_.email as email6_1_0_, contact0_.name as name7_1_0_, contact0_.note as note8_1_0_, contact0_.number as number9_1_0_, contact0_.phone as phone10_1_0_, contact0_.postal_code as postal_11_1_0_ from contact contact0_ where contact0_.id=?
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [5]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.postgres.model.Contact@548f780c]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+""17-09-2021 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Starting SpringJpaPostgresHibernateApplication using Java 16.0.2 on NoteBookIBM with PID 28720 (C:\workspaceIBM\SpringJPA-Postgres-Hibernate\target\classes started by LVTT1W631 in C:\workspaceIBM\SpringJPA-Postgres-Hibernate)
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - No active profile set, falling back to default profiles: default
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""17-09-2021 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 177 ms. Found 1 JPA repository interfaces.
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+""17-09-2021 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.52]
+""17-09-2021 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+""17-09-2021 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3124 ms
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+""17-09-2021 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+""17-09-2021 [restartedMain] INFO  o.f.c.i.license.VersionPrinter - Flyway Community Edition 7.7.3 by Redgate
+""17-09-2021 [restartedMain] INFO  o.f.c.i.database.base.DatabaseType - Database: jdbc:postgresql://localhost:5432/usuario (PostgreSQL 12.8)
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "usuario": << Empty Schema >>
+""17-09-2021 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Schema "usuario" is up to date. No migration necessary.
+""17-09-2021 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+""17-09-2021 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.32.Final
+""17-09-2021 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+""17-09-2021 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+""17-09-2021 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+""17-09-2021 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""17-09-2021 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	c.p.c.ContactController:
+	{PUT [/api/v1/update/{contactId}]}: update(long,Contact,BindingResult)
+	{POST [/api/v1/insert]}: save(Contact)
+	{GET [/api/v1/findAll], produces [application/json]}: findAll(int,String,String)
+	{PATCH [/api/v1/updateAddress/{contactId}]}: updateAddress(long,Address)
+	{DELETE [/api/v1/delete/{contactId}]}: deleteContactById(long)
+	{GET [/api/v1/findByID/{id}], produces [application/json]}: findById(long)
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	s.d.s.w.ApiResourceController:
+	{ [/swagger-resources/configuration/security]}: securityConfiguration()
+	{ [/swagger-resources]}: swaggerResources()
+	{ [/swagger-resources/configuration/ui]}: uiConfiguration()
+""17-09-2021 [restartedMain] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+""17-09-2021 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+""17-09-2021 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+""17-09-2021 [restartedMain] WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+""17-09-2021 [restartedMain] DEBUG o.s.w.s.v.f.FreeMarkerConfigurer - File system access not preferred: using SpringTemplateLoader
+""17-09-2021 [restartedMain] WARN  o.s.b.a.f.FreeMarkerAutoConfiguration - Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+""17-09-2021 [restartedMain] WARN  o.s.b.a.g.t.GroovyTemplateAutoConfiguration - Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+""17-09-2021 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+""17-09-2021 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+""17-09-2021 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+""17-09-2021 [restartedMain] INFO  c.p.SpringJpaPostgresHibernateApplication - Started SpringJpaPostgresHibernateApplication in 10.779 seconds (JVM running for 11.532)
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7de78e91
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2e0c0dab
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+""17-09-2021 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/5", parameters={}
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_0_, contact0_.address1 as address2_1_0_, contact0_.address2 as address3_1_0_, contact0_.address3 as address4_1_0_, contact0_.age as age5_1_0_, contact0_.email as email6_1_0_, contact0_.name as name7_1_0_, contact0_.note as note8_1_0_, contact0_.number as number9_1_0_, contact0_.phone as phone10_1_0_, contact0_.postal_code as postal_11_1_0_ from contact contact0_ where contact0_.id=?
+""17-09-2021 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [5]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.postgres.model.Contact@2f7aebdf]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/6", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_0_, contact0_.address1 as address2_1_0_, contact0_.address2 as address3_1_0_, contact0_.address3 as address4_1_0_, contact0_.age as age5_1_0_, contact0_.email as email6_1_0_, contact0_.name as name7_1_0_, contact0_.note as note8_1_0_, contact0_.number as number9_1_0_, contact0_.phone as phone10_1_0_, contact0_.postal_code as postal_11_1_0_ from contact contact0_ where contact0_.id=?
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [6]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.postgres.model.Contact@43a6a2f0]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findAll", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findAll(int, String, String)
+""17-09-2021 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ limit ?
+""17-09-2021 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select count(contact0_.id) as col_0_0_ from contact contact0_
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.postgres.model.Contact@5adc9a90, com.postgres.model.Contact@292f4be, com.postgres.model.Contact (truncated)...]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/4", parameters={}
+""17-09-2021 [http-nio-8080-exec-5] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_0_, contact0_.address1 as address2_1_0_, contact0_.address2 as address3_1_0_, contact0_.address3 as address4_1_0_, contact0_.age as age5_1_0_, contact0_.email as email6_1_0_, contact0_.name as name7_1_0_, contact0_.note as note8_1_0_, contact0_.number as number9_1_0_, contact0_.phone as phone10_1_0_, contact0_.postal_code as postal_11_1_0_ from contact contact0_ where contact0_.id=?
+""17-09-2021 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [4]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.postgres.model.Contact@3aa5fb0f]
+""17-09-2021 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-ui.html", parameters={}
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/ui", parameters={}
+""17-09-2021 [http-nio-8080-exec-8] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#uiConfiguration()
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/webjars/springfox-swagger-ui/favicon-32x32.png?v=2.9.2", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/webjars/]]
+""17-09-2021 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.UiConfiguration@4cdc50bd]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources/configuration/security", parameters={}
+""17-09-2021 [http-nio-8080-exec-10] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#securityConfiguration()
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.swagger.web.SecurityConfiguration@2ce5a4da]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/swagger-resources", parameters={}
+""17-09-2021 [http-nio-8080-exec-2] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to springfox.documentation.swagger.web.ApiResourceController#swaggerResources()
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[springfox.documentation.swagger.web.SwaggerResource@273d9745]]
+""17-09-2021 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/v2/api-docs", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-3] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 16:00:42 BRT 2021, status=404, error=Not Found, path=/}]
+""17-09-2021 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/csrf", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [Classpath [META-INF/resources/], Classpath [resources/], Classpath [static/], Classpath [public/], ServletContext [/]]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+""17-09-2021 [http-nio-8080-exec-4] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Fri Sep 17 16:00:42 BRT 2021, status=404, error=Not Found, path=/csrf}]
+""17-09-2021 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [springfox.documentation.spring.web.json.Json@7ea0fbb9]
+""17-09-2021 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findByID/4", parameters={}
+""17-09-2021 [http-nio-8080-exec-8] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findById(long)
+""17-09-2021 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_0_, contact0_.address1 as address2_1_0_, contact0_.address2 as address3_1_0_, contact0_.address3 as address4_1_0_, contact0_.age as age5_1_0_, contact0_.email as email6_1_0_, contact0_.name as name7_1_0_, contact0_.note as note8_1_0_, contact0_.number as number9_1_0_, contact0_.phone as phone10_1_0_, contact0_.postal_code as postal_11_1_0_ from contact contact0_ where contact0_.id=?
+""17-09-2021 [http-nio-8080-exec-8] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [BIGINT] - [4]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.postgres.model.Contact@5f4bd3b3]
+""17-09-2021 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/findAll?name=Davi", parameters={masked}
+""17-09-2021 [http-nio-8080-exec-10] TRACE o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.postgres.controller.ContactController#findAll(int, String, String)
+""17-09-2021 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select contact0_.id as id1_1_, contact0_.address1 as address2_1_, contact0_.address2 as address3_1_, contact0_.address3 as address4_1_, contact0_.age as age5_1_, contact0_.email as email6_1_, contact0_.name as name7_1_, contact0_.note as note8_1_, contact0_.number as number9_1_, contact0_.phone as phone10_1_, contact0_.postal_code as postal_11_1_ from contact contact0_ where contact0_.name like ? limit ?
+""17-09-2021 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%Davi%]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[com.postgres.model.Contact@1886531f]]
+""17-09-2021 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
 "

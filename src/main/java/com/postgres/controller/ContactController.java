@@ -48,13 +48,13 @@ public class ContactController {
     @GetMapping(value = "/findByID/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Contact> findById(
             @ApiParam(name = "contactId",
-                    value = "Id of the contact to be obtained. Cannot be empty.",
+                    value = "informe o ID. não pode ser null.",
                     example = "1",
                     required = true)
             @PathVariable long id) {
         try {
             Contact contact = contactService.findById(id);
-            return ResponseEntity.ok(contact);  // return 200, with json body
+            return new ResponseEntity<>(contact, HttpStatus.OK);
         } catch (ResourceNotFoundException ex) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // return 404, with null body
         }
