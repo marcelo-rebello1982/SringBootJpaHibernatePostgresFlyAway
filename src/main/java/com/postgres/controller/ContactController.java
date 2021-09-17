@@ -120,30 +120,6 @@ public class ContactController {
         return new ResponseEntity<>(contact, HttpStatus.OK);
     }
 
-//    @ApiOperation(value = "Update an existing contact", tags = {"contact"})
-//    @ApiResponses(value = {
-//            @ApiResponse(code = 200, message = "successful operation"),
-//            @ApiResponse(code = 400, message = "Invalid ID supplied"),
-//            @ApiResponse(code = 404, message = "Contact not found"),
-//            @ApiResponse(code = 405, message = "Validation exception")})
-//    @PutMapping(value = "/update/{contactId}")
-//    public ResponseEntity<Contact> updateContact(@ApiParam(name = "contactId", value = "Id of the contact to be update. Cannot be empty.", example = "1", required = true)
-//                                                 @PathVariable long contactId, @ApiParam("Contact to update. Cannot null or empty.") @Valid @RequestBody Contact contact) {
-//
-//        try {
-//            contact.setId(contactId);
-//            contactService.update(contact);
-//            return ResponseEntity.ok().body(contact);
-//        } catch (ResourceNotFoundException ex) {
-//            logger.error(ex.getMessage());
-//            return ResponseEntity.notFound().build();
-//        } catch (BadResourceException ex) {
-//            logger.error(ex.getMessage());
-//            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
-//        }
-//    }
-
-
     @ApiOperation(value = "Update an existing contact's address", tags = {"contact"})
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "successful operation"),
@@ -166,16 +142,6 @@ public class ContactController {
             return ResponseEntity.notFound().build();
         }
     }
-//
-//    @DeleteMapping(path = "/delete/{contactId}")
-//    public ResponseEntity<Contact> delete(@PathVariable long Id) throws ResourceNotFoundException {
-//        Optional<Contact> contactToDelete = Optional.ofNullable(contactService.findById(Id));
-//        if (!contactToDelete.isPresent())
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        contactService.delete(Id);
-//        return new ResponseEntity<>(contactToDelete.get(), HttpStatus.NO_CONTENT);
-//    }
-
 
     @ApiOperation(value = "Deletes a contact", tags = {"contact"})
     @ApiResponses(value = {
@@ -187,12 +153,10 @@ public class ContactController {
 
         try {
             contactService.delete(contactId);
-            //  return ResponseEntity.ok().build();
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (ResourceNotFoundException ex) {
             logger.error(ex.getMessage());
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            //return ResponseEntity.notFound().build();
         }
     }
 }
