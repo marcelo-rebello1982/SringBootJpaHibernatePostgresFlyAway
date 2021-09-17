@@ -1,9 +1,6 @@
 package com.postgres.controller;
 
-import com.postgres.exception.BadResourceException;
-import com.postgres.exception.BindingErrorsResponse;
-import com.postgres.exception.ResourceAlreadyExistsException;
-import com.postgres.exception.ResourceNotFoundException;
+import com.postgres.exception.*;
 import com.postgres.model.Address;
 import com.postgres.model.Contact;
 import com.postgres.service.ContactService;
@@ -41,24 +38,38 @@ public class ContactController {
     private ContactService contactService;
 
 
+//    @ApiOperation(value = "Find contact by ID", notes = "Returns a single contact", tags = {"contact"})
+//    @ApiResponses(value = {
+//            @ApiResponse(code = 200, message = "successful operation", response = Contact.class),
+//            @ApiResponse(code = 404, message = "Contact not found")})
+//    @GetMapping(value = "/findByID/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+//    public ResponseEntity<Contact> findById(@ApiParam(name = "contactId", value = "informe o ID. não pode ser null.",
+//                    example = "1",
+//                    required = true)
+//            @PathVariable long id) {
+//        try {
+//            Contact contact = contactService.findById(id);
+//            return new ResponseEntity<>(contact, HttpStatus.OK);
+//        } catch (ResourceNotFoundException ex) {
+//            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // return 404, with null body
+//        }
+//    }
+
     @ApiOperation(value = "Find contact by ID", notes = "Returns a single contact", tags = {"contact"})
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "successful operation", response = Contact.class),
             @ApiResponse(code = 404, message = "Contact not found")})
     @GetMapping(value = "/findByID/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Contact> findById(
-            @ApiParam(name = "contactId",
-                    value = "informe o ID. não pode ser null.",
-                    example = "1",
-                    required = true)
-            @PathVariable long id) {
-        try {
-            Contact contact = contactService.findById(id);
-            return new ResponseEntity<>(contact, HttpStatus.OK);
-        } catch (ResourceNotFoundException ex) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // return 404, with null body
+    public ResponseEntity<Contact> findByID(@ApiParam(name = "contactId", value = "informe o ID. não pode ser null.",
+            example = "1", required = true) @PathVariable long id) throws ResourceNotFoundException {
+        Optional<Contact> contact = Optional.ofNullable(contactService.findById(id));
+        if (contact.isPresent()) {
+            return new ResponseEntity<>(contact.get(), HttpStatus.OK);
+        } else {
+            throw new RecordNotFoundException();
         }
     }
+
 
     @ApiOperation(value = "Procurar pelo nome", notes = "Name search by %name% format", tags = {"contact"})
     @ApiResponses(value = {@ApiResponse(code = 200, message = "successful operation", response = List.class)})
@@ -146,7 +157,7 @@ public class ContactController {
             @ApiResponse(code = 200, message = "successful operation"),
             @ApiResponse(code = 404, message = "Contact not found")})
     @DeleteMapping(path = "/delete/{contactId}")
-    public ResponseEntity<Void> deleteContactById(@ApiParam(name = "contactId", value = "Id of the contact to be delete. Cannot be empty.", example = "1",
+    public ResponseEntity<Void> delete(@ApiParam(name = "contactId", value = "Id of the contact to be delete. Cannot be empty.", example = "1",
             required = true) @PathVariable long contactId) {
 
         try {
