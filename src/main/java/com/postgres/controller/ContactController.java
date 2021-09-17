@@ -40,19 +40,6 @@ public class ContactController {
     @Autowired
     private ContactService contactService;
 
-    @ApiOperation(value = "Procurar pelo nome", notes = "Name search by %name% format", tags = {"contact"})
-    @ApiResponses(value = {@ApiResponse(code = 200, message = "successful operation", response = List.class)})
-    @RequestMapping(method = RequestMethod.GET, path = "/findAll", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Contact>> findAll(@ApiParam(name = "contactId", value = "Page number, default is 1",
-            example = "1", required = false) @RequestParam(value = "page", defaultValue = "1") int pageNumber,
-                                                 @ApiParam("Digite o nome para procurar.") @RequestParam(required = false)
-                                                         String name, @RequestParam(required = false) String email) {
-        if (StringUtils.isEmpty(name)) {
-            return ResponseEntity.ok(contactService.findAll(pageNumber, ROWPERPAGE));
-        } else {
-            return ResponseEntity.ok(contactService.findAllByName(name, pageNumber, ROWPERPAGE));
-        }
-    }
 
     @ApiOperation(value = "Find contact by ID", notes = "Returns a single contact", tags = {"contact"})
     @ApiResponses(value = {
@@ -70,6 +57,20 @@ public class ContactController {
             return ResponseEntity.ok(contact);  // return 200, with json body
         } catch (ResourceNotFoundException ex) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null); // return 404, with null body
+        }
+    }
+
+    @ApiOperation(value = "Procurar pelo nome", notes = "Name search by %name% format", tags = {"contact"})
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "successful operation", response = List.class)})
+    @RequestMapping(method = RequestMethod.GET, path = "/findAll", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<Contact>> findAll(@ApiParam(name = "contactId", value = "Page number, default is 1",
+            example = "1", required = false) @RequestParam(value = "page", defaultValue = "1") int pageNumber,
+                                                 @ApiParam("Digite o nome para procurar.") @RequestParam(required = false)
+                                                         String name, @RequestParam(required = false) String email) {
+        if (StringUtils.isEmpty(name)) {
+            return ResponseEntity.ok(contactService.findAll(pageNumber, ROWPERPAGE));
+        } else {
+            return ResponseEntity.ok(contactService.findAllByName(name, pageNumber, ROWPERPAGE));
         }
     }
 
