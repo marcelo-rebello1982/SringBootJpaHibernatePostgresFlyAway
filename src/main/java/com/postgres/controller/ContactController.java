@@ -86,11 +86,9 @@ public class ContactController {
             return ResponseEntity.created(new URI("/api/v1/findByID/" + newContact.getId()))
                     .body(contact);
         } catch (ResourceAlreadyExistsException ex) {
-            // log exception first, then return Conflict (409)
             logger.error(ex.getMessage());
             return ResponseEntity.status(HttpStatus.CONFLICT).build();
         } catch (BadResourceException ex) {
-            // log exception first, then return Bad Request (400)
             logger.error(ex.getMessage());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
@@ -137,7 +135,6 @@ public class ContactController {
             contactService.updateAddress(contactId, address);
             return ResponseEntity.ok().build();
         } catch (ResourceNotFoundException ex) {
-            // log exception first, then return Not Found (404)
             logger.error(ex.getMessage());
             return ResponseEntity.notFound().build();
         }
