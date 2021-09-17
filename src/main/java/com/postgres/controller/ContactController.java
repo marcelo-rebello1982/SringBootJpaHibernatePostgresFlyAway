@@ -31,7 +31,7 @@ public class ContactController {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    private final int ROW_PER_PAGE = 5;
+    private final int ROWPERPAGE = 5;
 
     @Autowired
     private ContactService contactService;
@@ -44,9 +44,9 @@ public class ContactController {
                                                  @ApiParam("Digite o nome para procurar.") @RequestParam(required = false)
                                                                     String name, @RequestParam(required = false) String email) {
         if (StringUtils.isEmpty(name)) {
-            return ResponseEntity.ok(contactService.findAll(pageNumber, ROW_PER_PAGE));
+            return ResponseEntity.ok(contactService.findAll(pageNumber, ROWPERPAGE));
         } else {
-            return ResponseEntity.ok(contactService.findAllByName(name, pageNumber, ROW_PER_PAGE));
+            return ResponseEntity.ok(contactService.findAllByName(name, pageNumber, ROWPERPAGE));
         }
     }
 
